@@ -1,103 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>UtilityHub - Free Online Tools</title>
-<style>
-body{
-    font-family: Arial, sans-serif;
-    margin:0;
-    background:#f4f4f4;
-}
-header{
-    background:#ff4d4d;
-    color:white;
-    text-align:center;
-    padding:20px;
-}
-.container{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-    gap:20px;
-    padding:20px;
-}
-.card{
-    background:white;
-    padding:20px;
-    border-radius:10px;
-    box-shadow:0 2px 10px rgba(0,0,0,0.1);
-    text-align:center;
-}
-.card h2{
-    margin-top:0;
-}
-.btn{
-    background:#ff4d4d;
-    color:white;
-    padding:10px 15px;
-    border:none;
-    border-radius:5px;
-    cursor:pointer;
-}
-footer{
-    text-align:center;
-    padding:15px;
-    background:#222;
-    color:white;
-}
-</style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>UtilityHub - Free Online Tools</title>
+  <meta name="description" content="UtilityHub offers free online tools including QR Code Generator, EMI Calculator, Age Calculator, Image Compressor, and YouTube Tags Generator." />
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-
-<header>
-    <h1>UtilityHub</h1>
-    <p>Free Tools for Everyone</p>
-</header>
-
-<div class="container">
-
-    <div class="card">
-        <h2>QR Code Generator</h2>
-        <p>Create QR codes instantly.</p>
-        <button class="btn">Open Tool</button>
+  <header class="hero">
+    <nav>
+      <h1>UtilityHub</h1>
+      <a href="#tools">Tools</a>
+    </nav>
+    <div class="hero-content">
+      <h2>Free Daily Tools for Everyone</h2>
+      <p>QR generator, EMI calculator, age calculator, image compressor, and YouTube tags generator — all in one place.</p>
+      <a class="btn" href="#tools">Start Using Tools</a>
     </div>
+  </header>
 
-    <div class="card">
-        <h2>EMI Calculator</h2>
-        <p>Calculate loan EMI easily.</p>
-        <button class="btn">Open Tool</button>
-    </div>
+  <main id="tools" class="container">
+    <section class="tool-card">
+      <h2>QR Code Generator</h2>
+      <input id="qrText" placeholder="Enter text or link" />
+      <button onclick="generateQR()">Generate QR</button>
+      <div id="qrBox"></div>
+    </section>
 
-    <div class="card">
-        <h2>Age Calculator</h2>
-        <p>Find your exact age.</p>
-        <button class="btn">Open Tool</button>
-    </div>
+    <section class="tool-card">
+      <h2>EMI Calculator</h2>
+      <input id="loanAmount" type="number" placeholder="Loan Amount" />
+      <input id="interestRate" type="number" placeholder="Annual Interest Rate %" />
+      <input id="loanMonths" type="number" placeholder="Months" />
+      <button onclick="calculateEMI()">Calculate EMI</button>
+      <p id="emiResult"></p>
+    </section>
 
-    <div class="card">
-        <h2>Image Compressor</h2>
-        <p>Compress images online.</p>
-        <button class="btn">Open Tool</button>
-    </div>
+    <section class="tool-card">
+      <h2>Age Calculator</h2>
+      <input id="dob" type="date" />
+      <button onclick="calculateAge()">Calculate Age</button>
+      <p id="ageResult"></p>
+    </section>
 
-    <div class="card">
-        <h2>YouTube Tags Generator</h2>
-        <p>Generate SEO tags.</p>
-        <button class="btn">Open Tool</button>
-    </div>
+    <section class="tool-card">
+      <h2>Image Compressor</h2>
+      <input id="imageInput" type="file" accept="image/*" />
+      <button onclick="compressImage()">Compress Image</button>
+      <canvas id="canvas" style="display:none;"></canvas>
+      <a id="downloadImage" class="download" style="display:none;">Download Compressed Image</a>
+      <p id="imageInfo"></p>
+    </section>
 
-    <div class="card">
-        <h2>Signature Generator</h2>
-        <p>Create stylish signatures.</p>
-        <button class="btn">Open Tool</button>
-    </div>
+    <section class="tool-card">
+      <h2>YouTube Tags Generator</h2>
+      <input id="ytTopic" placeholder="Enter video topic, example: GTA 5 Myth Telugu" />
+      <button onclick="generateTags()">Generate Tags</button>
+      <textarea id="tagsOutput" readonly></textarea>
+    </section>
+  </main>
 
-</div>
+  <footer>
+    <p>© 2026 UtilityHub. Free tools for daily use.</p>
+  </footer>
 
-<footer>
-    © 2026 UtilityHub | Free Online Tools
-</footer>
-
+  <script src="script.js"></script>
 </body>
 </html>
