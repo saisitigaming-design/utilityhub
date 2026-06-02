@@ -1,6 +1,6 @@
 # 👋 Welcome to My GitHub Profile
 
-Hello! I'm **[Your Name]**, a passionate developer and creator dedicated to building practical solutions that make a difference.
+Hello! I'm **[SAIGANESH]**, a passionate developer and creator dedicated to building practical solutions that make a difference.
 
 ---
 
@@ -8,7 +8,7 @@ Hello! I'm **[Your Name]**, a passionate developer and creator dedicated to buil
 
 I'm focused on creating **useful, elegant, and accessible tools** that solve real-world problems. With a background in **[Your Background]**, I believe in the power of technology to simplify everyday tasks and empower users.
 
-Currently working on **[Current Focus/Role]**, I'm always eager to collaborate, learn, and contribute to meaningful projects.
+Currently working on **[FREE TOOLS]**, I'm always eager to collaborate, learn, and contribute to meaningful projects.
 
 ---
 
